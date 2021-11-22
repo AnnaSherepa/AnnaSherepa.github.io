@@ -256,18 +256,18 @@ function DrawSurface() {
             
         }
 
-        gl.uniform4fv(iColor, [0.73, 0.2, 0.4, 1]);
-        gl.uniform1f(iColorCoef, 0.0);
+    //    gl.uniform4fv(iColor, [0.73, 0.2, 0.4, 1]);
+    //    gl.uniform1f(iColorCoef, 0.0);
    
-        gl.enableVertexAttribArray(iAttribVertex);
-        gl.bindBuffer(gl.ARRAY_BUFFER, iVertexBuffer);
-        gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STREAM_DRAW);
-        gl.vertexAttribPointer(iAttribVertex, 3, gl.FLOAT, false, 0, 0);
+    //    gl.enableVertexAttribArray(iAttribVertex);
+    //    gl.bindBuffer(gl.ARRAY_BUFFER, iVertexBuffer);
+    //    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STREAM_DRAW);
+    //    gl.vertexAttribPointer(iAttribVertex, 3, gl.FLOAT, false, 0, 0);
    
         
-       gl.disableVertexAttribArray(iAttribTexture);
-       gl.vertexAttrib2f(iAttribTexture, 0.0, 0.0);
-       gl.uniform1f(iColorCoef, 1.0);
+    //   gl.disableVertexAttribArray(iAttribTexture);
+    //   gl.vertexAttrib2f(iAttribTexture, 0.0, 0.0);
+    //   gl.uniform1f(iColorCoef, 1.0);
        
    
       // gl.drawArrays(gl.LINE_LOOP, 0, vertices.length/3);
