@@ -233,16 +233,16 @@ function DrawSurface() {
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
     
 
-    let step_u = 0.001;
+    let step_u = 0.01;
     let step_v = 0.1;
     let count_i = 2/step_u;
     let count_j = 2/step_v;
-    //let vertices = [];
+    let vertices = [];
         
     for(let i = 0, ii=0; i <= 2; i+=step_u, ii++){
         let v = i * Math.PI;
         
-        let vertices = [];
+        //let vertices = [];
         for(let j = 0, ij = 0; j <= 2; j+=step_v, ij++){
             let u = j * Math.PI;
  
@@ -270,10 +270,10 @@ function DrawSurface() {
        gl.uniform1f(iColorCoef, 1.0);
        
    
-       gl.drawArrays(gl.LINE_LOOP, 0, vertices.length/3);
+      // gl.drawArrays(gl.LINE_LOOP, 0, vertices.length/3);
 
     }
-   // drawPrimitive( gl.TRIANGLES, [0.73, 0.79, 0.32, 1], vertices);
+    drawPrimitive( gl.TRIANGLE_STRIP, [0.73, 0.79, 0.32, 1], vertices);
     
 }
 
