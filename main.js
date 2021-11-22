@@ -166,12 +166,6 @@ function getRotationMatrix(alpha, beta, gamma) {
     const m32 = sX;
     const m33 = cX * cY;
 
-    // return [
-    //     m11, m12, m13,
-    //     m21, m22, m23,
-    //     m31, m32, m33,
-    // ];
-
     return [
         m11, m12, m13, 0,
         m21, m22, m23, 0,
@@ -262,7 +256,7 @@ function DrawSurface() {
             
         }
 
-        gl.uniform4fv(iColor, [0.5, 0.5, 0.5, 1]);
+        gl.uniform4fv(iColor, [0.73, 0.2, 0.4, 1]);
         gl.uniform1f(iColorCoef, 0.0);
    
         gl.enableVertexAttribArray(iAttribVertex);
