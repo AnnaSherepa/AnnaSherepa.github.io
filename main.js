@@ -19,8 +19,8 @@ let eyeSepInput;
 let eyeSepSlider;
 
 const deviceOrientation = {
-    alpha: 90,
-    beta: 0,
+    alpha: 0,
+    beta: 90,
     gamma: 0
 }
 const DEG_TO_RAD = Math.PI / 180; // Degree-to-Radian conversion
