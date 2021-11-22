@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<title>TrackballRotator Demo</title>
+<style>
+    body {
+        background-color: #EEEEEE;
+    }
+</style>
+
+<!--
+    An example using a TrackballRotator, defined in TrackballRotator.js,
+    to implement rotation by mouse.
+-->
+
+<script src="trackball-rotator.js"></script>
+<script src="https://webgl2fundamentals.org/webgl/resources/m4.js"></script>
+<script src="./shader.gpu"></script>
+<script src="./main.js"></script>
+
+
+</head>
+<body onload="init()">
+
+
+<h2>An Astroidal Torus with "Trackball" Mouse Rotation</h2>
+<h3>Anna Sherepa, TI-81, Variant 21</h3>
+<p id="message">Drag your mouse on the Astroidal Torus to rotate it.<br>
+(On a touch screen, you can use your finger.)</p>
+
+
+<noscript><hr><h3>This page requires Javascript and a web browser that supports WebGL</h3><hr></noscript>
+<div>
+    <div class="gman-widget-outer">
+    <div class="gman-widget-label">Eye Separation</div>
+    
+    <input id="eye" class="gman-widget-slider" type="range" min="0" max="500" value="70" oninput="eyeOut.value = eye.value">
+    <output name="Output" id="eyeOut">70</output>
+    
+</div>
+
+</div>
+<div id="canvas-holder">
+   <canvas width="600" height="600" id="webglcanvas" style="background-color:red"></canvas>
+</div>
+
+
+
+
+
+</body></html>
