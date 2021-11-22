@@ -340,7 +340,13 @@ function createProgram(gl, vShader, fShader) {
 function init() {
     eyeSepInput = document.getElementById('eye');
     eyeSepSlider = document.getElementById('eyeOut');
-    
+    window.addEventListener('deviceorientation', (e) => {
+        deviceOrientation.alpha = e.alpha;
+        deviceOrientation.beta = e.beta;
+        deviceOrientation.gamma = e.gamma;
+        draw()
+    })
+
     
     let canvas;
     try {
