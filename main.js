@@ -166,11 +166,11 @@ function getRotationMatrix(alpha, beta, gamma) {
     const m32 = sX;
     const m33 = cX * cY;
 
-//    return [
-//         m11, m12, m13,
-//         m21, m22, m23,
-//        m31, m32, m33,
-//     ];
+    // return [
+    //     m11, m12, m13,
+    //     m21, m22, m23,
+    //     m31, m32, m33,
+    // ];
 
     return [
         m11, m12, m13, 0,
@@ -239,7 +239,7 @@ function DrawSurface() {
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
     
 
-    let step_u = 0.001;
+    let step_u = 0.01;
     let step_v = 0.1;
     let count_i = 2/step_u;
     let count_j = 2/step_v;
@@ -340,14 +340,14 @@ function createProgram(gl, vShader, fShader) {
 function init() {
     eyeSepInput = document.getElementById('eye');
     eyeSepSlider = document.getElementById('eyeOut');
-    window.addEventListener("deviceorientation", function(event) {
-        deviceOrientation.alpha = event.alpha;
-        deviceOrientation.beta = event.beta;
-        deviceOrientation.gamma = event.gamma;
-    
-    }, true);
 
-    
+    window.addEventListener('deviceorientation', (e) => {
+        deviceOrientation.alpha = e.alpha;
+        deviceOrientation.beta = e.beta;
+        deviceOrientation.gamma = e.gamma;
+        draw();
+    });
+
     
     let canvas;
     try {
